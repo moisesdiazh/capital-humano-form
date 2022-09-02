@@ -6,32 +6,39 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prueba técnica Capital Humano</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/form.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
+
 </head>
 
 <body>
-    <header style="background-color: #002EFF;" class="d-flex justify-content-around ">
-        <div style="margin-left:132px;">
-            <img src="img/entel.png" alt="entel" style="width: 60.79px; height: 45px;" class="m-4">
+    <header style="background-color: #002EFF; width: 100%; height: 100px;" class="headerentel d-flex justify-content-around">
+        <div class="enteldiv" style="margin-left:143px; margin-top: 30px;">
+            <img class="entelimg" src="img/entel.png" alt="entel" style="width: 60.79px; height: 45px;" class="m-4">
         </div>
 
 
-        <div class="" style="margin-top: 35px; margin-right:444px;">
-            <a href="index.html" style="color: #FFF;" class="mr-3">Formulario</a>
-            <a href="list.html" style="color: #FFF;">Lista formulario</a>
+        <div class="aheader" style="margin-top: 35px; margin-right:444px;">
+            <a class="formulario" href="index.html" style="margin-right:25px; color: #FFF; width: 86px; height: 22px; font-size: 18px; line-height: 22px;" class="mr-3">Formulario</a>
+            <a class="listform" href="list.html" style="color: #FFF; font-size: 18px;
+            line-height: 22px; width: 126px;
+            height: 22px;">Lista formulario</a>
         </div>
 
     </header>
 
 
-    <div class="container">
+    <div class="contenido container">
 
-        <div style="margin-bottom: 40px; margin-top: 75px;">
-            <h1 class="mb-4">
+        <div class="titleparrafo" style="margin-bottom: 40px; margin-top: 75px;">
+            <h1 class="titulo mb-4">
                 Nuevo formulario
             </h1>
 
-            <p style="width: 825px;
+            <p class="parrafo" style="width: 825px;
             margin-bottom: 50px;
             height: 44px;
             font-weight: 400;
@@ -43,7 +50,7 @@
         </div>
 
 
-        <form action="" method="POST">
+        <form action="" method="POST" id="enviarForm">
 
         <h5 style="color: #002EFF; margin-bottom: 26px;">
             Datos del vendedor:
@@ -58,16 +65,22 @@
                 height: 45px;
                 background: #FFFFFF;
                 border: 1px solid #999999;
-                border-radius: 8px;" required/>
+                border-radius: 8px;" 
+                aria-required="true"
+                placeholder="Ingrese nombre y apellido"
+                required/>
             </div>
             
-            <div class="d-flex flex-column bd-highlight mb-3" style="margin-left: 30px;">
+            <div class="rutvendedor d-flex flex-column bd-highlight mb-3" style="margin-left: 30px;">
                 <label for="rut">Rut del vendedor</label>
                 <input id="rut" name="rut" type="text" style="box-sizing: border-box; width: 255px;
                 height: 45px;
                 background: #FFFFFF;
                 border: 1px solid #999999;
-                border-radius: 8px;" required/>
+                border-radius: 8px;" 
+                aria-required="true"
+                placeholder="XXXXXXXX-X"
+                required/>
             </div>
 
         </div>
@@ -80,7 +93,7 @@
             Datos del vehículo:
         </h5>
 
-        <div class="d-flex justify-content-start">
+        <div class="datosvehiculo d-flex justify-content-start">
             <div class="d-flex flex-column bd-highlight mb-3">
 
                 <label for="patente">Patente del vehículo</label>
@@ -91,10 +104,13 @@
                 top: 598.47px;
                 background: #FFFFFF;
                 border: 1px solid #999999;
-                border-radius: 8px;" required/>
+                border-radius: 8px;" 
+                required
+                placeholder="Ingrese patente"
+                />
             </div>
     
-            <div class="d-flex flex-column bd-highlight mb-3" style="margin-left:30px;">
+            <div class="modelovehiculo d-flex flex-column bd-highlight mb-3" style="margin-left:30px;">
     
                 <label for="marca">Marca vehículo</label>
                 <select name="marca" id="marca" style="box-sizing: border-box;
@@ -105,9 +121,10 @@
                 background: #FFFFFF;
                 border: 1px solid #999999;
                 border-radius: 8px;"
+                aria-required="true"
                 required
                 >
-                    <option selected value="seleccione">Seleccione</option>
+                    <option value="">Seleccione</option>
                     <option value="Suzuki">Suzuki</option>
                     <option value="Toyota">Toyota</option>
                     <option value="Ford">Ford</option>
@@ -117,7 +134,7 @@
                 </select>
             </div>
     
-            <div class="d-flex flex-column bd-highlight mb-3" style="margin-left:30px;">
+            <div class="marcavehiculo d-flex flex-column bd-highlight mb-3" style="margin-left:30px;">
     
                 <label for="modelo">Modelo vehículo</label>
                 <select name="modelo" id="modelo" style="box-sizing: border-box;
@@ -126,9 +143,10 @@
                 background: #FFFFFF;
                 border: 1px solid #999999;
                 border-radius: 8px;"
+                aria-required="true"
                 required
                 >
-                    <option selected>Seleccione</option>
+                    <option value="">Seleccione</option>
                 </select>
             </div>
         </div>
@@ -146,9 +164,10 @@
             background: #FFFFFF;
             border: 1px solid #999999;
             border-radius: 8px;"
+            aria-required="true"
             required
             >
-                <option selected>Seleccione</option>
+                <option value="">Seleccione</option>
                 <option value="Azul">Azul</option>
                 <option value="Gris">Gris</option>
                 <option value="Anaranjado">Anaranjado</option>
@@ -159,10 +178,10 @@
 
         <hr style="width: 825px; height: 0px; border: 1px solid #CCCCCC; margin-left:0px; margin-top: 24px;">
         
-        <div class="d-flex flex-column bd-highlight mb-3" style="margin-top:40px; margin-left:292px;">
+        <div class="botonEnviar d-flex flex-column bd-highlight mb-3" style="margin-top:40px; margin-left:292px;">
 
-            <div class="d-flex justify-content-around">
-                <input id="enviarForm" style="
+            <div class="enviarForm d-flex justify-content-around">
+                <input id="enviar" style="
                 border:none;
                 color: #FFF;
                 width: 255px;
@@ -195,25 +214,25 @@
     
     if (seleccionado === 'Suzuki') {
         modelo.innerHTML = 
-        "<option value='Suzuki Swift'>Suzuki Swift</option><option value='Suzuki Baleno'>Suzuki Baleno</option>";
+        "<option value=''>Seleccione</option><option value='Suzuki Swift'>Suzuki Swift</option><option value='Suzuki Baleno'>Suzuki Baleno</option>";
     }
     if (seleccionado === 'Toyota') {
         modelo.innerHTML = 
-        "<option value='Toyota Corolla'>Toyota Corolla</option><option value='Toyota Yaris'>Toyota Yaris</option>";
+        "<option value=''>Seleccione</option><option value='Toyota Corolla'>Toyota Corolla</option><option value='Toyota Yaris'>Toyota Yaris</option>";
     }
     if (seleccionado === 'Ford') {
         modelo.innerHTML = 
-        "<option value='Ford EcoSport'>Ford EcoSport</option><option value='Ford Bronco'>Ford Bronco</option>";
+        "<option value=''>Seleccione</option><option value='Ford EcoSport'>Ford EcoSport</option><option value='Ford Bronco'>Ford Bronco</option>";
     }
     if (seleccionado === 'Chevrolet') {
         modelo.innerHTML = 
-        "<option value='Chevrolet Spark'>Chevrolet Spark</option><option value='Chevrolet Prisma'>Chevrolet Prisma</option>";
+        "<option value=''>Seleccione</option><option value='Chevrolet Spark'>Chevrolet Spark</option><option value='Chevrolet Prisma'>Chevrolet Prisma</option>";
     }
     if (seleccionado === 'Volkswagen') {
         modelo.innerHTML = 
-        "<option value='Volkswagen Polo'>Volkswagen Polo</option><option value='Volkswagen Golf'>Volkswagen Golf</option>";
+        "<option value=''>Seleccione</option><option value='Volkswagen Polo'>Volkswagen Polo</option><option value='Volkswagen Golf'>Volkswagen Golf</option>";
     }
-    if (seleccionado === 'seleccione') {
+    if (seleccionado === '') {
         modelo.innerHTML = "<option value=''>Seleccione</option>";
     }
 
@@ -223,40 +242,63 @@
 
 <script>
 
-document.querySelector("#enviarForm").addEventListener("click", enviarForm);
+const form = document.querySelector("#enviarForm");
+
+form.addEventListener("submit", enviarForm);
     
 function enviarForm(e) {
     e.preventDefault();
-
-    let form = {};
-
-    let registro = [];
-
+    
+    let error = {};
+    
     const id = generateUUID();
-    const name = document.querySelector("#name").value;
-    const rut = document.querySelector("#rut").value;
-    const patente = document.querySelector("#patente").value;
-    const marca = document.querySelector("#marca").value;
-    const modelo = document.querySelector("#modelo").value;
-    const color = document.querySelector("#color").value;
+    const name = document.querySelector("#name").value.toLowerCase();
+    const rut = document.querySelector("#rut").value.toLowerCase();
+    const patente = document.querySelector("#patente").value.toLowerCase();
+    const marca = document.querySelector("#marca").value.toLowerCase();
+    const modelo = document.querySelector("#modelo").value.toLowerCase();
+    const color = document.querySelector("#color").value.toLowerCase();
+
+    //validaciones
+    if (name.trim().length < 3 || name.trim().length > 50) {
+        error.name = "El nombre debe tener min 3 y max 50 caracteres";
+    
+        alert(error.name);
+    
+        return;
+    }
+
+    if (patente.trim().length < 3 || patente.trim().length > 50) {
+        error.patente = "El nombre debe tener min 3 y max 50 caracteres";
+    
+        alert(error.patente);
+    
+        return;
+    }
+
+    if (!validateRut(rut)) {
+        error.rut = "El rut es invalido, formato: XXXXXXXX-X";
+        alert(error.rut);
+    
+        return;
+      }
+    //fin validaciones del formulario
 
 
-    form = {id, name, rut, patente, marca, modelo, color };
-
-    registro.push(form);
+    let form = {id, name, rut, patente, marca, modelo, color };
 
     let recoveredData = localStorage.getItem('formulario');
 
-    if(recoveredData == null){
-        localStorage.setItem("formulario", JSON.stringify(registro));
+    if(!recoveredData){
+        localStorage.setItem("formulario", JSON.stringify([form]));
     }else{
         let data = JSON.parse(recoveredData);
-        let newForm = [{id, name, rut, patente, marca, modelo, color }];
-        data.push(newForm);
+        //debugger
+        data.push(form);
         localStorage.setItem("formulario", JSON.stringify(data));
     }
 
-    console.log(JSON.parse(localStorage.getItem('formulario')));
+    alert("Sus datos han sido enviados correctamente");
 
 }
 
@@ -272,6 +314,32 @@ function enviarForm(e) {
         });
         return uuid;
     }
+</script>
+
+<script>
+    function validateRut(rut) {
+        var Fn = {
+          // Valida el rut con su cadena completa "XXXXXXXX-X"
+          validaRut: function (rutCompleto) {
+            if (!/^[0-9]+[-|‐]{1}[0-9kK]{1}$/.test(rutCompleto)) return false;
+            var tmp = rutCompleto.split("-");
+            var digv = tmp[1];
+            var rut = tmp[0];
+            if (digv == "K") digv = "k";
+            return Fn.dv(rut) == digv;
+          },
+          dv: function (T) {
+            var M = 0,
+              S = 1;
+            for (; T; T = Math.floor(T / 10))
+              S = (S + (T % 10) * (9 - (M++ % 6))) % 11;
+            return S ? S - 1 : "k";
+          },
+        };
+      
+        // Uso de la función
+        return Fn.validaRut(rut) ? true : false;
+      }
 </script>
 
 

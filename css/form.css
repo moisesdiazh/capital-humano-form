@@ -1,0 +1,122 @@
+body {
+    font-family: 'Barlow', sans-serif !important;
+
+}
+
+select {
+    border: 1px solid #ccc;
+    background: URL(../img/arrowdown.png) no-repeat 220px 10px #fff !important;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+
+@media (min-width: 374px) and (max-width: 768px) {
+
+	.headerentel {
+        width: 375px !important;
+        height: 60px !important;
+        display: flex !important;
+        flex-direction: row !important;
+        
+    }
+
+    .entelimg {
+        margin-left: 330px !important;
+        margin-top: 17px;
+        width: 35px !important;
+        height: 26.6px !important;
+    }
+
+    .aheader {
+        display: flex !important;
+        flex-direction: row !important;
+        margin-left: 80px;
+        margin-top: 10px !important;
+    }
+
+    .listform {
+        margin-top: 10px;
+        margin-right: 20px;
+        width: 126px !important;
+        height: 22px !important;
+        font-size: 18px !important;
+        line-height: 22px !important;
+    }
+
+    .formulario {
+        margin-top: 10px;
+        margin-right: 20px;
+        width: 86px !important;
+        height: 22px !important;
+        font-size: 18px !important;
+        line-height: 22px !important;
+    }
+
+    hr {
+        width: 320px !important;
+        height: 0px !important;
+    }
+
+    input, select {
+        width: 320px !important;
+        height: 45px !important;
+        margin: 0 !important;
+
+    }
+
+    select {
+        border: 1px solid #ccc;
+        background: URL(../img/arrowdown.png) no-repeat 280px 10px #fff !important;
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        appearance: none;
+ 
+    }
+
+    .enviarForm {
+        width: 320px !important;
+        height: 45px !important;
+        background: #FF3D00 !important;
+        border-radius: 22.5px !important;
+    }
+
+    .contenido {
+        width: 375px !important;
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
+    .datosvehiculo {
+        display: flex;
+        flex-flow: column wrap;
+    }
+
+    .modelovehiculo, .marcavehiculo, .rutvendedor {
+        margin-left: 0px !important;
+    }
+    
+    .titleparrafo{
+        width: 375px !important;
+    }
+
+    .titulo {
+        margin-top: 0px;
+        width: 185px !important;
+        height: 29px !important;
+    }
+
+    .parrafo {
+        width: 322px !important;
+        height: 90px !important;
+        margin-top: 90px !important;
+        margin-bottom: 0px !important;
+    }
+
+    .botonEnviar {
+        margin-left: 0px !important;
+    }
+
+
+}

@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Listado formulario</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/form.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Barlow&display=swap');
@@ -12,15 +16,17 @@
 </head>
 <body>
 
-    <header style="background-color: #002EFF;" class="d-flex justify-content-around ">
-        <div style="margin-left:132px;">
-            <img src="img/entel.png" alt="entel" style="width: 60.79px; height: 45px;" class="m-4">
+    <header style="background-color: #002EFF; width: 100%; height: 100px;" class="headerentel d-flex justify-content-around">
+        <div class="enteldiv" style="margin-left:143px; margin-top: 30px;">
+            <img class="entelimg" src="img/entel.png" alt="entel" style="width: 60.79px; height: 45px;" class="m-4">
         </div>
 
 
-        <div class="" style="margin-top: 35px; margin-right:444px;">
-            <a href="index.html" style="color: #FFF;" class="mr-3">Formulario</a>
-            <a href="list.html" style="color: #FFF;">Lista formulario</a>
+        <div class="aheader" style="margin-top: 35px; margin-right:444px;">
+            <a class="formulario" href="index.html" style="margin-right:25px; color: #FFF; width: 86px; height: 22px; font-size: 18px; line-height: 22px;" class="mr-3">Formulario</a>
+            <a class="listform" href="list.html" style="color: #FFF; font-size: 18px;
+            line-height: 22px; width: 126px;
+            height: 22px;">Lista formulario</a>
         </div>
 
     </header>
@@ -65,7 +71,7 @@
     </div>
     <div class="d-flex justify-content-center">
 
-        <h6 style="margin-right: 255px;">Mostrando registros del 1 al 10 de un total de 10 registros</h6>
+        <h6 style="margin-right: 280px;">Mostrando registros del 1 al 10 de un total de 10 registros</h6>
     </div>
     
     
@@ -86,6 +92,7 @@
 
 
     let forms = JSON.parse(localStorage.getItem("formulario"));
+    
 
     const templateList = forms.map((data) => {
         return `
@@ -96,14 +103,28 @@
             <td id="marca">${data.marca}</td>
             <td id="modelo">${data.modelo}</td>
             <td id="color">${data.color}</td>
-            <td id="eliminar"><img style="margin-left:20px;" src="img/delete.png" alt=""></td>
+            <td id="eliminar">
+                <input type="image" value="${data.id}" id="deleteRegister" style="margin-left:20px;" src="img/delete.png">
+            </td> 
+            
         </tr>
         `;
     });
 
     tableBody.innerHTML = templateList;
     
-    
+</script>
+
+<script>
+    //document.querySelector("#deleteRegister").addEventListener("click", deleteRegistro);
+
+    deleteForm.addEventListener("click", function(e){
+        e.preventDefault();
+        
+
+        
+    });
+
 
 
 </script>

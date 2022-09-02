@@ -552,6 +552,12 @@ pre code {
   margin-left: auto;
 }
 
+@media (min-width: 375px) and (max-width: 500px) {
+   h1 {
+    width: 20px !important;
+  }
+}
+
 @media (min-width: 576px) {
   .container, .container-sm {
     max-width: 540px;
@@ -10330,3 +10336,6 @@ a.text-dark:hover, a.text-dark:focus {
   }
 }
 /*# sourceMappingURL=bootstrap.css.map */
+
+
+
