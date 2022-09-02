@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listado formulario</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Barlow&display=swap');
+    </style>
+</head>
+<body>
+
+    <header style="background-color: #002EFF;" class="d-flex justify-content-around ">
+        <div style="margin-left:132px;">
+            <img src="img/entel.png" alt="entel" style="width: 60.79px; height: 45px;" class="m-4">
+        </div>
+
+
+        <div class="" style="margin-top: 35px; margin-right:444px;">
+            <a href="index.html" style="color: #FFF;" class="mr-3">Formulario</a>
+            <a href="list.html" style="color: #FFF;">Lista formulario</a>
+        </div>
+
+    </header>
+
+    <div class="container"></div>
+    <div class="container">
+        <div style="margin-bottom: 40px; margin-top: 75px;">
+            <h1 class="mb-4">
+                Lista formulario
+            </h1>
+
+            <p style="width: 825px;
+            margin-bottom: 50px;
+            height: 44px;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 22px;
+            color: #191919;">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the bed industry's standard dummy text ever since.
+            </p>
+        </div>
+
+        <div>
+            <table class="table" style="width: 820px;">
+                <thead>
+                  <tr>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Rut vendedor</th>
+                    <th scope="col">Patente vehiculo</th>
+                    <th scope="col">Marca vehiculo</th>
+                    <th scope="col">Modelo vehiculo</th>
+                    <th scope="col">Color</th>
+                    <th scope="col">Eliminar</th>
+                  </tr>
+                </thead>
+                <tbody id="tableBody">
+                    
+                </tbody>
+              </table>
+        </div>
+       
+    </div>
+    <div class="d-flex justify-content-center">
+
+        <h6 style="margin-right: 255px;">Mostrando registros del 1 al 10 de un total de 10 registros</h6>
+    </div>
+    
+    
+</body>
+<script scr="js/jquery-3.6.1.min.js"></script>
+<script scr="js/bootstrap.min.js"></script>
+
+<script>
+
+    const tableBody = document.querySelector("#tableBody");
+    const tableName = document.querySelector("#name");
+    const tableRut = document.querySelector("#rut");
+    const tablePatente = document.querySelector("#patente");
+    const tableMarca = document.querySelector("#marca");
+    const tableModelo = document.querySelector("#modelo");
+    const tableColor = document.querySelector("#color");
+    const tableDelete = document.querySelector("#eliminar");
+
+
+    let forms = JSON.parse(localStorage.getItem("formulario"));
+
+    const templateList = forms.map((data) => {
+        return `
+        <tr>
+            <td id="name">${data.name}</td>
+            <td id="rut">${data.rut}</td>
+            <td id="patente">${data.patente}</td>
+            <td id="marca">${data.marca}</td>
+            <td id="modelo">${data.modelo}</td>
+            <td id="color">${data.color}</td>
+            <td id="eliminar"><img style="margin-left:20px;" src="img/delete.png" alt=""></td>
+        </tr>
+        `;
+    });
+
+    tableBody.innerHTML = templateList;
+    
+    
+
+
+</script>
+</html>

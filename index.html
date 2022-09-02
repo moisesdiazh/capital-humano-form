@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba técnica Capital Humano</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+
+<body>
+    <header style="background-color: #002EFF;" class="d-flex justify-content-around ">
+        <div style="margin-left:132px;">
+            <img src="img/entel.png" alt="entel" style="width: 60.79px; height: 45px;" class="m-4">
+        </div>
+
+
+        <div class="" style="margin-top: 35px; margin-right:444px;">
+            <a href="index.html" style="color: #FFF;" class="mr-3">Formulario</a>
+            <a href="list.html" style="color: #FFF;">Lista formulario</a>
+        </div>
+
+    </header>
+
+
+    <div class="container">
+
+        <div style="margin-bottom: 40px; margin-top: 75px;">
+            <h1 class="mb-4">
+                Nuevo formulario
+            </h1>
+
+            <p style="width: 825px;
+            margin-bottom: 50px;
+            height: 44px;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 22px;
+            color: #191919;">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the bed industry's standard dummy text ever since.
+            </p>
+        </div>
+
+
+        <form action="" method="POST">
+
+        <h5 style="color: #002EFF; margin-bottom: 26px;">
+            Datos del vendedor:
+        </h5>
+
+        <div class="row" style="margin-left: 0; margin-bottom: 30px;">
+            <div class="d-flex flex-column bd-highlight mb-3">
+
+                <label for="name">Nombre y apellido</label>
+                <input id="name" name="name" type="text" style="box-sizing: border-box;
+                width: 540px;
+                height: 45px;
+                background: #FFFFFF;
+                border: 1px solid #999999;
+                border-radius: 8px;" required/>
+            </div>
+            
+            <div class="d-flex flex-column bd-highlight mb-3" style="margin-left: 30px;">
+                <label for="rut">Rut del vendedor</label>
+                <input id="rut" name="rut" type="text" style="box-sizing: border-box; width: 255px;
+                height: 45px;
+                background: #FFFFFF;
+                border: 1px solid #999999;
+                border-radius: 8px;" required/>
+            </div>
+
+        </div>
+
+        
+            
+        <hr style="width: 825px; height: 0px; border: 1px solid #CCCCCC; margin-left:0px;">
+
+        <h5 style="color: #002EFF; margin-top: 40px; margin-bottom: 32px;">
+            Datos del vehículo:
+        </h5>
+
+        <div class="d-flex justify-content-start">
+            <div class="d-flex flex-column bd-highlight mb-3">
+
+                <label for="patente">Patente del vehículo</label>
+                <input name="patente" id="patente" type="text" style="box-sizing: 
+                border-box; width: 255px;
+                height: 45px;
+                left: 307px;
+                top: 598.47px;
+                background: #FFFFFF;
+                border: 1px solid #999999;
+                border-radius: 8px;" required/>
+            </div>
+    
+            <div class="d-flex flex-column bd-highlight mb-3" style="margin-left:30px;">
+    
+                <label for="marca">Marca vehículo</label>
+                <select name="marca" id="marca" style="box-sizing: border-box;
+                width: 255px;
+                height: 45px;
+                left: 592px;
+                top: 598.47px;
+                background: #FFFFFF;
+                border: 1px solid #999999;
+                border-radius: 8px;"
+                required
+                >
+                    <option selected value="seleccione">Seleccione</option>
+                    <option value="Suzuki">Suzuki</option>
+                    <option value="Toyota">Toyota</option>
+                    <option value="Ford">Ford</option>
+                    <option value="Chevrolet">Chevrolet</option>
+                    <option value="Volkswagen">Volkswagen</option>
+
+                </select>
+            </div>
+    
+            <div class="d-flex flex-column bd-highlight mb-3" style="margin-left:30px;">
+    
+                <label for="modelo">Modelo vehículo</label>
+                <select name="modelo" id="modelo" style="box-sizing: border-box;
+                width: 255px;
+                height: 45px;
+                background: #FFFFFF;
+                border: 1px solid #999999;
+                border-radius: 8px;"
+                required
+                >
+                    <option selected>Seleccione</option>
+                </select>
+            </div>
+        </div>
+
+        
+
+        <div class="d-flex flex-column bd-highlight mb-3" style="margin-top:10px;">
+
+            <label for="color">Color vehículo</label>
+            <select id="color" name="color" class="mb-4" id="" style="box-sizing: border-box;
+            width: 255px;
+            height: 45px;
+            left: 307px;
+            top: 698.47px;
+            background: #FFFFFF;
+            border: 1px solid #999999;
+            border-radius: 8px;"
+            required
+            >
+                <option selected>Seleccione</option>
+                <option value="Azul">Azul</option>
+                <option value="Gris">Gris</option>
+                <option value="Anaranjado">Anaranjado</option>
+                <option value="Blanco">Blanco</option>
+                <option value="Amarillo">Amarillo</option>
+            </select>
+        </div>
+
+        <hr style="width: 825px; height: 0px; border: 1px solid #CCCCCC; margin-left:0px; margin-top: 24px;">
+        
+        <div class="d-flex flex-column bd-highlight mb-3" style="margin-top:40px; margin-left:292px;">
+
+            <div class="d-flex justify-content-around">
+                <input id="enviarForm" style="
+                border:none;
+                color: #FFF;
+                width: 255px;
+                height: 45px;
+                background: #FF3D00;
+                border-radius: 22.5px;" 
+                type="submit" 
+                value="Enviar" 
+            />
+            </div>
+        </div>
+
+        
+        
+
+        </form>
+    </div>
+    
+</body>
+<script scr="js/jquery-3.6.1.min.js"></script>
+<script scr="js/bootstrap.min.js"></script>
+
+<script>
+    const selectElement = document.querySelector('#marca');
+    const modelo = document.querySelector('#modelo')
+    
+    selectElement.addEventListener('change', (event) => {
+    const seleccionado = event.target.value;
+
+    
+    if (seleccionado === 'Suzuki') {
+        modelo.innerHTML = 
+        "<option value='Suzuki Swift'>Suzuki Swift</option><option value='Suzuki Baleno'>Suzuki Baleno</option>";
+    }
+    if (seleccionado === 'Toyota') {
+        modelo.innerHTML = 
+        "<option value='Toyota Corolla'>Toyota Corolla</option><option value='Toyota Yaris'>Toyota Yaris</option>";
+    }
+    if (seleccionado === 'Ford') {
+        modelo.innerHTML = 
+        "<option value='Ford EcoSport'>Ford EcoSport</option><option value='Ford Bronco'>Ford Bronco</option>";
+    }
+    if (seleccionado === 'Chevrolet') {
+        modelo.innerHTML = 
+        "<option value='Chevrolet Spark'>Chevrolet Spark</option><option value='Chevrolet Prisma'>Chevrolet Prisma</option>";
+    }
+    if (seleccionado === 'Volkswagen') {
+        modelo.innerHTML = 
+        "<option value='Volkswagen Polo'>Volkswagen Polo</option><option value='Volkswagen Golf'>Volkswagen Golf</option>";
+    }
+    if (seleccionado === 'seleccione') {
+        modelo.innerHTML = "<option value=''>Seleccione</option>";
+    }
+
+    });
+
+</script>
+
+<script>
+
+document.querySelector("#enviarForm").addEventListener("click", enviarForm);
+    
+function enviarForm(e) {
+    e.preventDefault();
+
+    let form = {};
+
+    let registro = [];
+
+    const id = generateUUID();
+    const name = document.querySelector("#name").value;
+    const rut = document.querySelector("#rut").value;
+    const patente = document.querySelector("#patente").value;
+    const marca = document.querySelector("#marca").value;
+    const modelo = document.querySelector("#modelo").value;
+    const color = document.querySelector("#color").value;
+
+
+    form = {id, name, rut, patente, marca, modelo, color };
+
+    registro.push(form);
+
+    let recoveredData = localStorage.getItem('formulario');
+
+    if(recoveredData == null){
+        localStorage.setItem("formulario", JSON.stringify(registro));
+    }else{
+        let data = JSON.parse(recoveredData);
+        let newForm = [{id, name, rut, patente, marca, modelo, color }];
+        data.push(newForm);
+        localStorage.setItem("formulario", JSON.stringify(data));
+    }
+
+    console.log(JSON.parse(localStorage.getItem('formulario')));
+
+}
+
+</script>
+
+<script>
+    function generateUUID() {
+        var d = new Date().getTime();
+        var uuid = 'xx4xxyx'.replace(/[xy]/g, function (c) {
+            var r = (d + Math.random() * 16) % 16 | 0;
+            d = Math.floor(d / 16);
+            return (c == 'x' ? r : (r & 0x3 | 0x8)).toString(16);
+        });
+        return uuid;
+    }
+</script>
+
+
+</html>
