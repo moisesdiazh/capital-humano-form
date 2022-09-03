@@ -33,8 +33,7 @@ const form = document.querySelector("#enviarForm");
 
 form.addEventListener("submit", enviarForm);
 
-function enviarForm(e) {
-  e.preventDefault();
+function enviarForm() {
 
   let error = {};
 
